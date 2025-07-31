@@ -1,11 +1,12 @@
 import React from 'react'
 import './App.css'
+import Slider from './components/Slider/Slider'
 
 function App() {
   return (
-    <>
-     <p className='text-5xl text-red-400 uppercase'>Hello world</p>
-    </>
+    <div className='min-h-screen bg-blue-50 flex items-center justify-center p-6'>
+     <Slider/>
+    </div>
   )
 }
 
