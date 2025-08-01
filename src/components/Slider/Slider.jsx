@@ -48,7 +48,9 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <div className="max-w-[800px] mx-auto bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl p-8 text-white shadow-lg">
+    <div className=" max-w-[800px]">
+
+    <div className="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl p-8 text-white shadow-lg">
       <h2 className="text-xl font-semibold text-center mb-6">
         What our customer are saying
       </h2>
@@ -76,26 +78,27 @@ export default function TestimonialSlider() {
         <button
           onClick={prevSlide}
           className="text-white text-2xl hover:text-gray-300"
-        >
+          >
           &#8592;
         </button>
         <div className="flex space-x-2">
           {testimonials.map((_, i) => (
             <span
-              key={i}
-              className={`h-2 w-2 rounded-full ${
-                i === currentIndex ? "bg-white" : "bg-gray-300"
-              }`}
+            key={i}
+            className={`h-2 w-2 rounded-full ${
+              i === currentIndex ? "bg-white" : "bg-gray-300"
+            }`}
             />
           ))}
         </div>
         <button
           onClick={nextSlide}
           className="text-white text-2xl hover:text-gray-300"
-        >
+          >
           &#8594;
         </button>
       </div>
     </div>
+          </div>
   );
 }
