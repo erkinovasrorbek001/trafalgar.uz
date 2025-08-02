@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import igm from "../../assets/Mask Group.png";
+import './Slider.css'; // optional if you want to add animations or extra styles
 
 const testimonials = [
   {
@@ -19,7 +20,7 @@ const testimonials = [
   {
     name: "jekyll",
     role: "Founder Circle",
-    image:igm,
+    image: igm,
     quote:
       "As a healthcare provider, you can trust us to deliver reliable and efficient solutions that enhance patient care and streamline operations.",
   },
@@ -48,57 +49,60 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <div className=" max-w-[800px]">
+    <div id="slider__container" className="slider__container mx-auto  px-8 sm:px-6  lg:px-8 py-12 ">
+      <div  className="max-w-[800px] box mx-auto  bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-2xl shadow-lg  sm:p-12 transition-all duration-300">
+        <h2 className="title text-2xl sm:text-3xl font-semibold text-center mb-8">
+          What our customers are saying
+        </h2>
 
-    <div className="bg-gradient-to-r from-blue-400 to-indigo-500 rounded-xl p-8 text-white shadow-lg">
-      <h2 className="text-xl font-semibold text-center mb-6">
-        What our customer are saying
-      </h2>
-
-      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6">
-        <div className="flex justify-center sm:justify-start">
+        <div className="slider__nav  max-w-[700px] max-[825px]:block max-[825px]:text-center
+         mx-auto flex flex-col sm:flex-row items-center gap-6 p-5 ">
           <img
             src={testimonials[currentIndex].image}
             alt={testimonials[currentIndex].name}
-            className="w-25 h-26 rounded-full border-2 border-white object-cover"
+            className= "img w-24 h-24 rounded-full border-4  border-white object-cover shadow-md"
           />
-        </div>
-        <div className="text-center sm:text-left mt-4 sm:mt-0">
-          <h3 className="font-bold">{testimonials[currentIndex].name}</h3>
-          <p className="text-sm text-gray-100">
-            {testimonials[currentIndex].role}
-          </p>
-        </div>
-          <p className="mt-4 italic text-gray-200 w-[50%] mr-0 ml-auto text-left mx-auto max-w-full max-sm:w-[100%] max-sm:text-center sm:max-w-[80%]">
-            “{testimonials[currentIndex].quote}”
-          </p>
-      </div>
 
-      <div className="flex justify-center items-center mt-6 space-x-6">
-        <button
-          onClick={prevSlide}
-          className="text-white text-2xl hover:text-gray-300"
-          >
-          &#8592;
-        </button>
-        <div className="flex space-x-2">
-          {testimonials.map((_, i) => (
-            <span
-            key={i}
-            className={`h-2 w-2 rounded-full ${
-              i === currentIndex ? "bg-white" : "bg-gray-300"
-            }`}
-            />
-          ))}
+          <div className="flex-1 text-center text-nowrap sm:text-left">
+            <h3 className="text-xl font-bold">
+              {testimonials[currentIndex].name}
+            </h3>
+            <p id="paragrif" className=" text-sm  text-gray-100 mb-4">
+              {testimonials[currentIndex].role}
+            </p>
+          </div>
+            <p id="paragrif" className="italic  w-[45%] text-gray-200  ml-0 mr-0 max-[825px]:text-center max-[825px]:mx-auto leading-relaxed">
+              “{testimonials[currentIndex].quote}”
+            </p>
         </div>
-        <button
-          onClick={nextSlide}
-          className="text-white text-2xl hover:text-gray-300"
+
+        <div className="flex justify-center items-center mt-8 gap-6">
+          <button
+            onClick={prevSlide}
+            className="text-white text-2xl hover:text-gray-300 transition"
           >
-          &#8594;
-        </button>
+            &#8592;
+          </button>
+
+          <div className="flex space-x-2 gap-2">
+            {testimonials.map((_, i) => (
+              <span
+                key={i}
+                className={`h-2 w-2 rounded-full gap-5 ${
+                  i === currentIndex ? "bg-white" : "bg-gray-300"
+                }`}
+              ></span>
+            ))}
+          </div>
+
+          <button
+            onClick={nextSlide}
+            className="text-white text-2xl gap-5 ml-5 hover:text-gray-300 transition"
+          >
+            &#8594;
+          </button>
+        </div>
       </div>
     </div>
-          </div>
   );
 }

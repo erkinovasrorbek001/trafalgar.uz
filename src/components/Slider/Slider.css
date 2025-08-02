@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+#slider__container{
+    margin: 0 auto;
+  margin-top: 30px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    margin-left: 15px ;
+    margin-right: 15px;
+}
+.box{
+      margin-left: 15px ;
+    margin-right: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.img{
+    margin: 5px auto;
+}
+#paragrif{
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 30px;
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    text-box: justify;
+    
+
+}
+.slider__text{
+    margin-right: 0;
+}
+.slider__nav{
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+.title{
+    padding-top: 25px;
+}

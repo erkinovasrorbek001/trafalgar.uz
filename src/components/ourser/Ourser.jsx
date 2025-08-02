@@ -5,9 +5,9 @@ import { MdLocalPharmacy } from "react-icons/md";
 const Service = () => {
   return (
      <div class="service">
-            <div class="container sercice__container">
+            <div class=" sercice__container">
                 <h1 class="service__title">Our services</h1>
-                <hr/>
+                <hr className='rite'/>
                 <p class="service__text">We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health</p>
                 <ul class="service__list">
                     <li class="service__item">
