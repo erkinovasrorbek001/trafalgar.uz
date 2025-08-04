@@ -1,0 +1,111 @@
+.footer{
+    background-color: #5A98F2;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 100px;
+}
+
+.footer-logo1{
+    font-size: 26px;
+    font-weight: 700;
+    color: #5B9BF3;
+    background-color: white;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    border-radius: 50%;
+}
+.footer-logo2{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+.footer-logo{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+.footer-text{
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+.footer-info{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+}
+.footer-subtitle{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.footer-link{
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+}
+.footer-item:nth-child(1){
+    width: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-item{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* ====== RESPONSIVE QO‘SHIMCHALARI ====== */
+
+/* Tabletlar: 2 ustun */
+@media (max-width: 992px) {
+  .footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  
+}
+
+/* Mobil: 1 ustun stacked */
+@media (max-width: 680px) {
+  .footer-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .footer-item,
+  .footer-item:nth-child(1) {
+    text-align: center;
+  }
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+  }
+  .footer-logo2 {
+    font-size: 22px;
+  }
+  .footer-text {
+    font-size: 16px;
+  }
+  .footer-subtitle {
+    font-size: 18px;
+  }
+}
