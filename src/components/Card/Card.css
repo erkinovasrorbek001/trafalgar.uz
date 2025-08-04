@@ -1,0 +1,143 @@
+.card {
+  margin-top: 100px;
+  padding: 0 16px; /* chetidan biroz padding mobilda */
+}
+
+.card .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px; /* biroz kichikroq mobil uchun */
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  justify-items: center;
+}
+
+.card-item {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+  padding-bottom: 30px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  aspect-ratio: 350 / 240;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-subtitle {
+  font-size: 21px;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: grey;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-bar {
+  width: 100%;
+  max-width: 280px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.card-link,
+.card-icon {
+  font-size: 17px;
+  font-weight: 600;
+  color: #4089ED;
+}
+
+.card-link:hover {
+  color: #1f6ed4;
+}
+.card-btn{
+    font-size: 18px;
+    font-weight: 700;
+    color: #458FF6;
+    padding: 10px 30px;
+    border: 2px solid #458FF6;
+    border-radius: 55px;
+    margin-top: 50px;
+}
+
+/* RESPONSIVE */
+
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}
+
+/* Mobil: 1 column */
+@media (max-width: 680px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .card-item, .card-img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .card-subtitle,
+  .card-text,
+  .card-bar {
+    padding: 0 12px;
+  }
+}
