@@ -60,7 +60,7 @@ export default function TestimonialSlider() {
           <img
             src={testimonials[currentIndex].image}
             alt={testimonials[currentIndex].name}
-            className= "img w-24 h-24 rounded-full border-4  border-white object-cover shadow-md"
+            className= "img w-24 h-24 rounded-full border-4  -mt-5 border-white object-cover shadow-md"
           />
 
           <div className="flex-1 text-center text-nowrap sm:text-left">
