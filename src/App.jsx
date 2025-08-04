@@ -12,9 +12,9 @@ function App() {
   return (
     <>
      <Header/>
+     <Leading/>
      <Ourser/>
      <Slider/>
-     <Leading/>
      <Card/>
      <Footer/>
      </>

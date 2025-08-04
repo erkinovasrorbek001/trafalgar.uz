@@ -1,8 +1,8 @@
 
 
-import './Card.css'
-import { FaLongArrowAltRight } from "react-icons/fa";
 import React from 'react';
+import { FaLongArrowAltRight } from "react-icons/fa";
+import './Card.css'
 import img1 from "../Card/Images/img1.png"
 import img2 from "../Card/Images/img2.png"
 import img3 from "../Card/Images/img3.png"
